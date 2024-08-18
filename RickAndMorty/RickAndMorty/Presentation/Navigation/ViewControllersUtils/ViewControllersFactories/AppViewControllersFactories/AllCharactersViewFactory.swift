@@ -25,6 +25,10 @@ class AllCharactersViewFactory: ViewControllerFactory {
     }
     
     private static func getFetchAllCharactersUseCase() -> FetchAllCharactersUseCase {
-        return DefaultFetchAllCharactersUseCase(repo: FetchAllCharactersRepositoryImpl())
+        return DefaultFetchAllCharactersUseCase(repo: getFetchAllCharactersRepository())
+    }
+    
+    private static func getFetchAllCharactersRepository() -> FetchAllCharactersRepository {
+        return FetchAllCharactersRepositoryImpl(fetchAllCharactersEndPoint: FetchAllCharactersEndPointImpl())
     }
 }

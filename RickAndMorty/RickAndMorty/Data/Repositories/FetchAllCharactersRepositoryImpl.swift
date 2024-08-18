@@ -8,11 +8,18 @@
 import Foundation
 
 class FetchAllCharactersRepositoryImpl: FetchAllCharactersRepository {
-    func fetchAllCharacters(paginator: Paginator, 
+    private var fetchAllCharactersEndPoint: FetchAllCharactersEndPoint
+    
+    init(fetchAllCharactersEndPoint: FetchAllCharactersEndPoint) {
+        self.fetchAllCharactersEndPoint = fetchAllCharactersEndPoint
+    }
+    
+    func fetchAllCharacters(paginator: Paginator,
                             characterStatus: Status?,
                             completion: @escaping (Response<[Character]?>)) {
         let queryParams = getQueryParams(paginator: paginator, characterStatus: characterStatus)
-        FetchAllCharactersEndPoint(fetchCharactersQueryParameters: queryParams).request(completion: completion)
+        fetchAllCharactersEndPoint.setFetchAllCharactersQueryParams(queryParams: queryParams)
+        fetchAllCharactersEndPoint.request(completion: completion)
     }
     
     private func getQueryParams(paginator: Paginator,
