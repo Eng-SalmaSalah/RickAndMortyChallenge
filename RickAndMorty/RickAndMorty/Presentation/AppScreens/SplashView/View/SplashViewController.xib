@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="RickAndMorty" customModuleProvider="target">
+            <connections>
+                <outlet property="appLogoImageView" destination="mHg-7q-CbD" id="1h2-pk-5u2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whiteCircleView" destination="8AX-Fh-QKx" id="ayw-4A-V41"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AX-Fh-QKx">
+                    <rect key="frame" x="57" y="218" width="300" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="7CC-eh-npZ"/>
+                        <constraint firstAttribute="width" constant="300" id="BO1-nU-b3H"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashImage" translatesAutoresizingMaskIntoConstraints="NO" id="mHg-7q-CbD">
+                    <rect key="frame" x="57" y="218" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="tTr-T7-iJu"/>
+                        <constraint firstAttribute="width" constant="300" id="zq2-C7-VHB"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" name="mainBlue"/>
+            <constraints>
+                <constraint firstItem="8AX-Fh-QKx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4JO-Lc-BGE"/>
+                <constraint firstItem="8AX-Fh-QKx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CKn-ty-jVk"/>
+                <constraint firstItem="mHg-7q-CbD" firstAttribute="centerY" secondItem="8AX-Fh-QKx" secondAttribute="centerY" id="osB-36-sN3"/>
+                <constraint firstItem="mHg-7q-CbD" firstAttribute="centerX" secondItem="8AX-Fh-QKx" secondAttribute="centerX" id="rgu-A2-R4F"/>
+            </constraints>
+            <point key="canvasLocation" x="-13" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SplashImage" width="85.333335876464844" height="85.333335876464844"/>
+        <namedColor name="mainBlue">
+            <color red="0.30980392156862746" green="0.68235294117647061" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
